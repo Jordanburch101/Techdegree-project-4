@@ -498,42 +498,47 @@ template {
 
 .default {
   background-color: #51ddfc;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, transform 0.5s ease-in-out;
 }
 .default:hover {
   background-color: #9cecfd;
+  transform: scale(1.1);
 }
 
 .error {
   background-color: #e4757a;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, transform 0.5s ease-in-out;
 }
 .error:hover {
   background-color: #f1b5b8;
+  transform: scale(1.1);
 }
 
 .info {
   background-color: #927bc1;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, transform 0.5s ease-in-out;
 }
 .info:hover {
   background-color: #bdafd9;
+  transform: scale(1.1);
 }
 
 .success {
   background-color: #63cc82;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, transform 0.5s ease-in-out;
 }
 .success:hover {
   background-color: #9ddfb0;
+  transform: scale(1.1);
 }
 
 .warning {
   background-color: #fd7856;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out, transform 0.5s ease-in-out;
 }
 .warning:hover {
   background-color: #feb4a2;
+  transform: scale(1.1);
 }
 
 /* ============================================= */
