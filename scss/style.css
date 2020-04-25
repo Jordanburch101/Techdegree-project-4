@@ -4,7 +4,8 @@
 * {
   font-family: "Lato", sans-serif;
   color: #777;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 p {
@@ -61,7 +62,8 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -98,7 +100,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -204,9 +207,9 @@ select {
  * Correct the inability to style clickable types in iOS and Safari.
  */
 button,
-[type=button],
-[type=reset],
-[type=submit] {
+[type="button"],
+[type="reset"],
+[type="submit"] {
   -webkit-appearance: button;
 }
 
@@ -214,9 +217,9 @@ button,
  * Remove the inner border and padding in Firefox.
  */
 button::-moz-focus-inner,
-[type=button]::-moz-focus-inner,
-[type=reset]::-moz-focus-inner,
-[type=submit]::-moz-focus-inner {
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
   border-style: none;
   padding: 0;
 }
@@ -225,9 +228,9 @@ button::-moz-focus-inner,
  * Restore the focus styles unset by the previous rule.
  */
 button:-moz-focusring,
-[type=button]:-moz-focusring,
-[type=reset]:-moz-focusring,
-[type=submit]:-moz-focusring {
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
 
@@ -245,7 +248,8 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -277,9 +281,10 @@ textarea {
  * 1. Add the correct box sizing in IE 10.
  * 2. Remove the padding in IE 10.
  */
-[type=checkbox],
-[type=radio] {
-  box-sizing: border-box;
+[type="checkbox"],
+[type="radio"] {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
@@ -288,8 +293,8 @@ textarea {
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
-[type=number]::-webkit-inner-spin-button,
-[type=number]::-webkit-outer-spin-button {
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
@@ -297,7 +302,7 @@ textarea {
  * 1. Correct the odd appearance in Chrome and Safari.
  * 2. Correct the outline style in Safari.
  */
-[type=search] {
+[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
   outline-offset: -2px;
@@ -307,7 +312,7 @@ textarea {
 /**
  * Remove the inner padding in Chrome and Safari on macOS.
  */
-[type=search]::-webkit-search-decoration {
+[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
@@ -359,15 +364,29 @@ template {
 /* ============================================= */
 .nav {
   padding-left: 0;
-  flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
+
 @media (min-width: 768px) {
   .nav {
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }
 
@@ -377,11 +396,14 @@ template {
   padding: 10px 0;
   display: block;
   width: 100%;
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  -webkit-transition: background-color .2s ease-in-out,  color .2s ease-in-out;
+  transition: background-color .2s ease-in-out,  color .2s ease-in-out;
 }
+
 @media (min-width: 768px) {
   .nav-link {
-    flex-basis: 100px;
+    -ms-flex-preferred-size: 100px;
+        flex-basis: 100px;
   }
 }
 
@@ -422,7 +444,8 @@ template {
 /*              Forms                            */
 /* ============================================= */
 .form {
-  flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
 
 .input {
@@ -454,6 +477,7 @@ template {
   max-width: 100%;
   max-height: 100%;
 }
+
 .img-frame {
   display: block;
   margin-left: auto;
@@ -463,11 +487,13 @@ template {
   padding: 13px;
   border: 1px solid #ccc;
 }
+
 .img-logo {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
+
 @media (min-width: 768px) {
   .img-logo {
     margin-left: initial;
@@ -487,6 +513,7 @@ template {
   text-transform: uppercase;
   border-radius: 5px;
 }
+
 @media (min-width: 768px) {
   .btn {
     padding: 10px 30px;
@@ -498,47 +525,72 @@ template {
 
 .default {
   background-color: #51ddfc;
-  transition: background-color 0.3s ease-in-out, transform 0.5s ease-in-out;
+  -webkit-transition: background-color .3s ease-in-out, -webkit-transform .5s ease-in-out;
+  transition: background-color .3s ease-in-out, -webkit-transform .5s ease-in-out;
+  transition: background-color .3s ease-in-out, transform .5s ease-in-out;
+  transition: background-color .3s ease-in-out, transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
 }
+
 .default:hover {
   background-color: #9cecfd;
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .error {
   background-color: #e4757a;
-  transition: background-color 0.3s ease-in-out, transform 0.5s ease-in-out;
+  -webkit-transition: background-color .3s ease-in-out, -webkit-transform .5s ease-in-out;
+  transition: background-color .3s ease-in-out, -webkit-transform .5s ease-in-out;
+  transition: background-color .3s ease-in-out, transform .5s ease-in-out;
+  transition: background-color .3s ease-in-out, transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
 }
+
 .error:hover {
   background-color: #f1b5b8;
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .info {
   background-color: #927bc1;
-  transition: background-color 0.3s ease-in-out, transform 0.5s ease-in-out;
+  -webkit-transition: background-color .3s ease-in-out, -webkit-transform .5s ease-in-out;
+  transition: background-color .3s ease-in-out, -webkit-transform .5s ease-in-out;
+  transition: background-color .3s ease-in-out, transform .5s ease-in-out;
+  transition: background-color .3s ease-in-out, transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
 }
+
 .info:hover {
   background-color: #bdafd9;
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .success {
   background-color: #63cc82;
-  transition: background-color 0.3s ease-in-out, transform 0.5s ease-in-out;
+  -webkit-transition: background-color .3s ease-in-out, -webkit-transform .5s ease-in-out;
+  transition: background-color .3s ease-in-out, -webkit-transform .5s ease-in-out;
+  transition: background-color .3s ease-in-out, transform .5s ease-in-out;
+  transition: background-color .3s ease-in-out, transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
 }
+
 .success:hover {
   background-color: #9ddfb0;
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .warning {
   background-color: #fd7856;
-  transition: background-color 0.3s ease-in-out, transform 0.5s ease-in-out;
+  -webkit-transition: background-color .3s ease-in-out, -webkit-transform .5s ease-in-out;
+  transition: background-color .3s ease-in-out, -webkit-transform .5s ease-in-out;
+  transition: background-color .3s ease-in-out, transform .5s ease-in-out;
+  transition: background-color .3s ease-in-out, transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
 }
+
 .warning:hover {
   background-color: #feb4a2;
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 /* ============================================= */
@@ -547,6 +599,7 @@ template {
 .container {
   padding: 0 10px;
 }
+
 @media (min-width: 768px) {
   .container {
     max-width: 1400px;
@@ -565,29 +618,46 @@ template {
 }
 
 .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 1em 10px;
 }
+
 @media (min-width: 768px) {
   .row {
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
 }
 
 [class^=col] {
   margin-top: 10px;
-  flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
   min-height: 25px;
   padding: 10px;
   border-radius: 5px;
 }
+
 @media (min-width: 768px) {
   [class^=col] {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     margin-top: 0;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   [class^=col] + [class^=col] {
     margin-left: 10px;
@@ -597,113 +667,137 @@ template {
 .col-1.theme {
   background-color: #927bc1;
 }
+
 @media (min-width: 768px) {
   .col-1 {
-    flex-basis: 8.33%;
+    -ms-flex-preferred-size: 8.33%;
+        flex-basis: 8.33%;
   }
 }
 
 .col-2.theme {
   background-color: #fd7856;
 }
+
 @media (min-width: 768px) {
   .col-2 {
-    flex-basis: 16.67%;
+    -ms-flex-preferred-size: 16.67%;
+        flex-basis: 16.67%;
   }
 }
 
 .col-3.theme {
   background-color: #deb2ee;
 }
+
 @media (min-width: 768px) {
   .col-3 {
-    flex-basis: 25%;
+    -ms-flex-preferred-size: 25.00%;
+        flex-basis: 25.00%;
   }
 }
 
 .col-4.theme {
   background-color: #7ee6fd;
 }
+
 @media (min-width: 768px) {
   .col-4 {
-    flex-basis: 33.33%;
+    -ms-flex-preferred-size: 33.33%;
+        flex-basis: 33.33%;
   }
 }
 
 .col-5.theme {
   background-color: #88d9a0;
 }
+
 @media (min-width: 768px) {
   .col-5 {
-    flex-basis: 41.67%;
+    -ms-flex-preferred-size: 41.67%;
+        flex-basis: 41.67%;
   }
 }
 
 .col-6.theme {
   background-color: #4da2bb;
 }
+
 @media (min-width: 768px) {
   .col-6 {
-    flex-basis: 50%;
+    -ms-flex-preferred-size: 50.00%;
+        flex-basis: 50.00%;
   }
 }
 
 .col-7.theme {
   background-color: #ec9fa3;
 }
+
 @media (min-width: 768px) {
   .col-7 {
-    flex-basis: 58.33%;
+    -ms-flex-preferred-size: 58.33%;
+        flex-basis: 58.33%;
   }
 }
 
 .col-8.theme {
   background-color: #fd9f85;
 }
+
 @media (min-width: 768px) {
   .col-8 {
-    flex-basis: 66.67%;
+    -ms-flex-preferred-size: 66.67%;
+        flex-basis: 66.67%;
   }
 }
 
 .col-9.theme {
   background-color: #e4757a;
 }
+
 @media (min-width: 768px) {
   .col-9 {
-    flex-basis: 75%;
+    -ms-flex-preferred-size: 75.00%;
+        flex-basis: 75.00%;
   }
 }
 
 .col-10.theme {
   background-color: #63cc82;
 }
+
 @media (min-width: 768px) {
   .col-10 {
-    flex-basis: 83.33%;
+    -ms-flex-preferred-size: 83.33%;
+        flex-basis: 83.33%;
   }
 }
 
 .col-11.theme {
   background-color: #51ddfc;
 }
+
 @media (min-width: 768px) {
   .col-11 {
-    flex-basis: 91.67%;
+    -ms-flex-preferred-size: 91.67%;
+        flex-basis: 91.67%;
   }
 }
 
 .col-12.theme {
   background-color: #80e8d1;
 }
+
 @media (min-width: 768px) {
   .col-12 {
-    flex-basis: 100%;
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
   }
 }
 
 .card {
-  flex-basis: 100%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
 }
-
 /*# sourceMappingURL=style.css.map */

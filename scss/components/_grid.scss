@@ -4,11 +4,16 @@
 
 .container {
     padding: 0 10px;
+    @include media('med') {
+        max-width: $max-width;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 .centered {
     @include media('med') {
-        max-width: $max-width;
         display: block;
         margin-left: auto;
         margin-right: auto;
