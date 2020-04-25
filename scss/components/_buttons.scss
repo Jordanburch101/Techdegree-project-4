@@ -10,6 +10,7 @@
     padding: 10px 0;
     text-transform: uppercase;
     border-radius: 5px;
+    
     @include media ('med') {
         padding: 10px 30px;
         &+ .btn {
@@ -20,20 +21,25 @@
   
 .default {
     background-color: $color-btn-default;
+    @include lighten($color-btn-default);
 }
   
 .error {
     background-color: $color-btn-error;
+    @include lighten($color-btn-error);
 }
   
 .info {
     background-color: $color-btn-info;
+    @include lighten($color-btn-info);
 }
   
 .success {
     background-color: $color-btn-success;
+    @include lighten($color-btn-success);
 }
   
 .warning {
     background-color: $color-btn-warning;
+    @include lighten($color-btn-warning);
 }

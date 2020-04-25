@@ -34,3 +34,12 @@
         background-color: $color;
     }
 }
+
+// Button hover
+
+@mixin lighten($color) {
+    transition: background-color .3s ease-in-out;
+    &:hover {
+        background-color: lighten($color, 15%);
+    }
+}
