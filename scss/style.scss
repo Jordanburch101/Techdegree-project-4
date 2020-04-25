@@ -1,27 +1,18 @@
 // ======================================
-//  Partial Imports
+//  Index Imports
 // ======================================
 
 // Utilities
-@import 'utilities/variables',
-        'utilities/mixins',
-        'utilities/functions',
-        'utilities/helpers';
+@import 'utilities/index';
         
 // Base Styles     
-@import 'base/reset',
-        'base/base';
+@import 'base/index';
 
 // Layout Styles
-@import 'layout/containers',
-        'layout/header',
-        'layout/card',
-        'layout/footer';
+@import 'layout/index';
 
 // Component Styles
-@import 'components/nav',
-        'components/buttons',
-        'components/images';
+@import 'components/index';
 
 
 
