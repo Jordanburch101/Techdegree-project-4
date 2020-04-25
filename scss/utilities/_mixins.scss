@@ -1,0 +1,17 @@
+// ======================================
+//  Mixins
+// ======================================
+
+
+
+// Media Queries ===============================
+
+@mixin media($break) {
+    $value: map-get($breakpoints, $break );
+    $med: map-get($breakpoints, 'med' );
+                                            // Add @else if later if more breakpoints necessary 
+    @if $value == null {
+        @error "`#{$break}` is not a valid breakpoint name.";
+    }
+
+}
