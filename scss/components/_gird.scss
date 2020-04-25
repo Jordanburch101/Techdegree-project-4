@@ -5,11 +5,23 @@
 .container {
     padding: 0 10px;
 }
-  
+
+.centered {
+    @include media('med') {
+        max-width: $max-width;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 .row {
     display: flex;
     flex-direction: column;
     padding: 1em 10px;
+    @include media('med') {
+        flex-direction: row;
+    }
 }
   
 [class^=col] {
@@ -18,56 +30,103 @@
     min-height: 25px;
     padding: 10px;
     border-radius: 5px;
+    @include media('med') {
+        display: flex;
+        justify-content: center;
+        margin-top: 0;
+        align-items: center;
+        &+ [class^=col] {
+            margin-left: 10px;
+        }
+    }
 }
   
-.theme.col-1 {
-    background-color: #927bc1;
+
+.col-1 {
+    @include theme($color-col-1);
+    @include media('med') {
+        flex-basis: 8.33%;
+    }
 }
   
-.theme.col-2 {
-    background-color: #fd7856;
+.col-2 {
+    @include theme($color-col-2);
+    @include media('med') {
+        flex-basis: 16.67%;
+    }
 }
   
-.theme.col-3 {
-    background-color: #deb2ee;
+.col-3 {
+    @include theme($color-col-3);
+    @include media('med') {
+        flex-basis: 25.00%;
+    }
 }
   
-.theme.col-4 {
-    background-color: #7ee6fd;
+.col-4 {
+    @include theme($color-col-4);
+    @include media('med') {
+        flex-basis: 33.33%;
+    }
 }
   
-.theme.col-5 {
-    background-color: #88d9a0;
+.col-5 {
+    @include theme($color-col-5);
+    @include media('med') {
+        flex-basis: 41.67%;
+    }
 }
   
-.theme.col-6 {
-    background-color: #4da2bb;
+.col-6 {
+    @include theme($color-col-6);
+    @include media('med') {
+        flex-basis: 50.00%;
+    }
 }
   
-.theme.col-7 {
-    background-color: #ec9fa3;
+.col-7 {
+    @include theme($color-col-7);
+    @include media('med') {
+        flex-basis: 58.33%;
+    }
 }
   
-.theme.col-8 {
-    background-color: #fd9f85;
+.col-8 {
+    @include theme($color-col-8);
+    @include media('med') {
+        flex-basis: 66.67%;
+    }
 }
   
-.theme.col-9 {
-    background-color: #e4757a;
-  }
-  
-.theme.col-10 {
-    background-color: #63cc82;
+.col-9 {
+    @include theme($color-col-9);
+    @include media('med') {
+        flex-basis: 75.00%;
+    }
 }
   
-.theme.col-11 {
-    background-color: #51ddfc;
+.col-10 {
+    @include theme($color-col-10);
+    @include media('med') {
+        flex-basis: 83.33%;
+    }
 }
   
-.theme.col-12 {
-    background-color: #80e8d1;
+.col-11 {
+    @include theme($color-col-11);
+    @include media('med') {
+        flex-basis: 91.67%;
+    }
+}
+  
+.col-12 {
+    @include theme($color-col-12);
+    @include media('med') {
+        flex-basis: 100%;
+    }
 }
   
 .card {
     flex-basis: 100%;
 }
+

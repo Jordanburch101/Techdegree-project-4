@@ -6,12 +6,31 @@
 
 // Media Queries ===============================
 
-@mixin media($break) {
-    $value: map-get($breakpoints, $break );
-    $med: map-get($breakpoints, 'med' );
-                                            // Add @else if later if more breakpoints necessary 
-    @if $value == null {
-        @error "`#{$break}` is not a valid breakpoint name.";
-    }
+// Media queries
+@mixin media($break) {            
+  @if $break == 'med' {
+    @media (min-width: $break-med) {
+      @content;             // Add 'else if' for more breakpoints
+    }          
+  }    
+}
 
+// Block Quote
+
+@mixin quote{
+    font-size: 1.5em;
+    font-weight: 300;
+    font-style: italic;
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 8px solid $color-primary;
+    border-radius: 5px;
+}
+
+// Grid theme
+
+@mixin theme($color) {
+    &.theme {
+        background-color: $color;
+    }
 }

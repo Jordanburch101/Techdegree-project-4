@@ -7,6 +7,11 @@
     flex-basis: 100%;
     display: flex;
     flex-direction: column;
+    @include media('med') {
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+    }
 }
   
 .nav-link {
@@ -18,6 +23,9 @@
     transition: 
       background-color .2s ease-in-out, 
       color .2s ease-in-out;
+    @include media('med') {
+        flex-basis: 100px;
+    }
 }
   
 .nav-link:hover {
